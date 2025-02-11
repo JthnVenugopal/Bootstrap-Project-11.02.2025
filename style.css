@@ -1,0 +1,261 @@
+ /* Core Styles */
+ :root {
+  --primary-color: #0d6efd;
+  --secondary-color: #77A68D;
+  --accent-color: #ffc107;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(#c3c30d2a,#3bd5ff46, #2956f744,#048daf3f);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Navigation */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 70%;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(45deg,#90900647,#3bd5ff69, #2956f793,#048daf8a);
+  padding: 150px 0;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  height: 38rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: linear-gradient(45deg, #29416312, #0dfd7d14);
+  min-height: 10rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  height: 26rem;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #2941631f, #0dfd7d24);
+}
+
+.feature-card .card-body img{
+  height: 15rem;
+}
+
+/* Stats Counter */
+.stats-counter {
+  background: linear-gradient(45deg, #0044ff6d, #0033ff9c);
+  color: white;
+  padding: 60px 0;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.counter-item {
+  transition: all 0.3s ease;
+}
+
+.counter-item:hover .counter-number {
+  transform: scale(1.1);
+  color: var(--accent-color);
+}
+
+/* Pricing Cards */
+.pricing-card {
+  background: linear-gradient(45deg, #29416312, #0dfd7d14);
+  border: none;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Blog Cards */
+.blog-card {
+  height: auto; /* Remove fixed height */
+  background: linear-gradient(45deg, #29416312, #0dfd7d14);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem; /* Add margin for spacing */
+}
+
+.blog-card .card-body img {
+  height: auto; /* Make image height flexible */
+  max-height: 200px; /* Set a max height for consistency */
+  width: 100%; /* Ensure the image scales properly */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .blog-card .card-body img {
+    max-height: 150px; /* Adjust image height for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-card .card-body img {
+    max-height: 120px; /* Further adjust for very small screens */
+  }
+}
+
+/* Contact Card */
+.contact-card {
+  background: linear-gradient(45deg, #29416312, #0dfd7d14);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--primary-color);
+}
+
+/* Button Styles */
+.btn {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media(max-width: 700px) {
+  .blog-card {
+    height: 18rem;
+  }
+  
+  .hero-section {
+    height: auto;
+    padding: 100px 0;
+  }
+}
+
+/* General Styles for Smaller Screens */
+@media (max-width: 992px) {
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0.75rem; /* Adjust padding for smaller screens */
+  }
+
+  .hero-section {
+    padding: 100px 0; /* Reduce padding for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .feature-card {
+    height: auto; /* Allow feature cards to adjust height */
+  }
+
+  .pricing-card {
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+}
+
+
+/* Styles for Tablets */
+@media (max-width: 768px) {
+  .stats-counter {
+    padding: 40px 0; /* Reduce padding */
+  }
+
+  .blog-card .card-body img {
+    max-height: 150px; /* Adjust image height for smaller screens */
+  }
+
+  .newsletter-section {
+    padding: 40px 0; /* Reduce padding */
+  }
+}
+
+
+/* Styles for Mobile Devices */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0.5rem; /* Adjust navbar padding */
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem; /* Adjust font size for headings */
+  }
+
+  .hero-section p {
+    font-size: 1.2rem; /* Adjust font size for paragraphs */
+  }
+
+  .team-member img {
+    width: 80%; /* Adjust image size for team members */
+  }
+
+  .contact-card {
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+}
