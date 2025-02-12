@@ -100,6 +100,7 @@ body {
   color: white;
   padding: 60px 0;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  line-height: 2.5;
 }
 
 .counter-item {
@@ -137,6 +138,18 @@ body {
   height: 25em;
 }
 
+@media(max-width:500px){
+  .blog-card-section{
+    height: 20em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .blog-card-body{
+      width: 95vw;
+  }
+}
+
 .blog-card .card-body img {
   height: auto;
   max-height: 200px;
@@ -162,6 +175,15 @@ body {
   height: auto;
   max-height: 200px;
   object-fit: cover;
+}
+
+@media(max-width:500px){
+  .team-member img {
+    width: 12em;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+  }
 }
 
 /* Responsive Adjustments */
