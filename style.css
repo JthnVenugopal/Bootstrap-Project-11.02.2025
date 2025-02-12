@@ -25,7 +25,7 @@ body {
 .navbar {
   transition: all 0.3s ease;
   width:100vw ;
-  background: linear-gradient(90deg,rgba(8, 175, 231, 0.498),rgba(216, 164, 6, 0.414),rgba(2, 27, 107, 0.475));
+  /* background: linear-gradient(120deg,#575701,#024d61, #031a6f,#034251); */
 }
 
 
@@ -59,9 +59,9 @@ body {
   background-position: center;
   position: relative;
   color: white;
-  height: 38rem;
   display: flex;
   align-items: center;
+  height: 80vh;
 }
 
 /* Feature Cards */
@@ -213,7 +213,8 @@ footer {
 
   .hero-section {
     padding: 100px 0; /* Reduce padding for smaller screens */
-    height: auto; /* Allow height to adjust based on content */
+    /* height: auto; Allow height to adjust based on content */
+
   }
 
   .feature-card {
@@ -246,6 +247,10 @@ footer {
 @media (max-width: 576px) {
   .navbar {
     padding: 0.5rem; /* Adjust navbar padding */
+  }
+
+  .hero-section{
+    height: 80vh;
   }
 
   .hero-section h1 {
